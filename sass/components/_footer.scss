@@ -1,0 +1,151 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $bg-dark;
+}
+
+.footer--container {
+  display: flex;
+  //align-items: baseline;
+  //justify-content: space-between;
+
+  @media screen and (min-width: 320px) and (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__address {
+  @media screen and (min-width: 320px) and (max-width: $mobile) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.address__list {
+  list-style: none;
+}
+
+.address__item + .address__item {
+  margin-top: 9px;
+}
+
+.address__link {
+  font-style: normal;
+  text-decoration: none;
+  line-height: 1.5;
+  color: $white-color;
+
+  transition: color 250ms $transition-type;
+
+  &:is(:hover, :focus) {
+    color: $main-color-blue;
+    opacity: 1;
+  }
+}
+
+.address__link--opacity06 {
+  opacity: 0.6;
+}
+
+.footer-enjoy {
+  @media screen and (min-width: 320px) and (max-width: $mobile) {
+    margin-bottom: 60px;
+  }
+}
+
+.footer-enjoy__title {
+  display: block;
+  font-weight: 700;
+  line-height: 1.14;
+  color: $white-color;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  @media screen and (min-width: 320px) and (max-width: $mobile) {
+    text-align: center;
+  }
+}
+
+.footer-enjoy__list {
+  display: flex;
+  list-style: none;
+}
+
+.footer-enjoy__item + .footer-enjoy__item {
+  margin-left: 10px;
+}
+
+.footer-enjoy__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba($white-color, 0.1);
+  color: $white-color;
+  fill: currentColor;
+
+  transition: background-color 250ms $transition-type;
+
+  &:is(:hover, :focus) {
+    background-color: $main-color-blue;
+  }
+}
+
+.footer-subscribe {
+  width: 100%;
+  // margin-left: 93px;
+}
+
+.subscribe-form {
+  display: flex;
+  @media screen and (min-width: 320px) and (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.subscribe-form__email {
+  //width: 358px;
+  height: 50px;
+  border: 1px solid rgba($white-color, 0.3);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba($black-color, 0.15);
+  padding: 15px 16px;
+  background-color: rgba($main-color-blue, 0);
+  //margin-right: 12px;
+  color: $white-color;
+  font-size: 16px;
+
+  &::placeholder {
+    line-height: 1.25;
+    color: rgba($white-color, 0.6);
+  }
+  @media screen and (min-width: 320px) and (max-width: $mobile) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.subscribe-form__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: $white-color;
+  background-color: $main-color-blue;
+  padding: 10px 28px 10px 29px;
+  box-shadow: 0px 4px 4px rgba($black-color, 0.15);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  fill: currentColor;
+  cursor: pointer;
+}
+
+.subscribe-form__icon {
+  margin-left: 10px;
+}

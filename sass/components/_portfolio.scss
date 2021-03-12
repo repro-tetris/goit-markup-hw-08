@@ -1,0 +1,132 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filter__list {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.filter__item {
+  display: inline-flex;
+
+  &:is(:hover, :focus) {
+    box-shadow: 0px 4px 4px rgba($black-color, 0.25);
+  }
+}
+.filter__item + .filter__item {
+  margin-left: 8px;
+}
+
+.filter__btn {
+  padding: 6px 22px;
+
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.63;
+  color: $main-color-darkgrey;
+  background-color: $bg-light;
+  border: none;
+  border-radius: 4px;
+
+  transition: color 250ms $transition-type,
+    background-color 250ms $transition-type, box-shadow 250ms $transition-type;
+
+  &:is(:hover, :focus, .filter__btn--active) {
+    color: $white-color;
+    background-color: $main-color-blue;
+    cursor: pointer;
+    box-shadow: 0px 3px 1px rgba($black-color, 0.1),
+      0px 1px 2px rgba($black-color, 0.08), 0px 2px 2px rgba($black-color, 0.12);
+  }
+}
+
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  /* 
+  в майбутньому тут можна використовувати
+  row-gap: 30px;
+  column-gap: 30px;
+  замість "костилів" з від'ємними маржинами
+  */
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.portfolio__item {
+  margin-left: 30px;
+  margin-top: 30px;
+
+  transition: box-shadow 250ms $transition-type;
+
+  &:is(:hover, :focus) {
+    box-shadow: 0px 4px 4px rgba($black-color, 0.25);
+  }
+}
+
+.portfolio__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__img {
+  display: block;
+  max-width: 100%;
+}
+
+.portfolio__overlay {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px;
+
+  font-size: 18px;
+  line-height: 1.55;
+  color: $white-color;
+  background-color: rgba($main-color-blue, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+
+  transition: transform 250ms $transition-type;
+
+  .portfolio__item:is(:hover, :focus) & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio__description {
+  display: block;
+  text-decoration: none;
+  padding: 20px 24px;
+  background-color: $white-color;
+  border-left: 1px solid $border-color-light;
+  border-right: 1px solid $border-color-light;
+  border-bottom: 1px solid $border-color-light;
+  outline: none;
+}
+
+.portfolio__subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 2;
+  color: $main-color-darkgrey;
+  margin-bottom: 4px;
+}
+
+.portfolio__text {
+  font-size: 16px;
+  color: $main-color-lightgrey;
+  line-height: 1.87;
+}

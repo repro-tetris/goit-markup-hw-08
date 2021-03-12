@@ -1,0 +1,118 @@
+// #region HEADER
+.header {
+  position: relative;
+  background-color: $white-color;
+  border-bottom: 1px solid $border-color-light;
+  margin: 0 auto;
+}
+.burger-menu {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+
+  transform: translateY(-50%);
+}
+.burger-menu__icon-open {
+}
+.burger-menu__icon-close {
+  opacity: 0;
+  pointer-events: none;
+}
+.menu {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+// .header--container {
+//   display: flex;
+//   align-items: center;
+// }
+// // #endregion
+// // #region NAVIGATION
+// .navigation {
+//   display: flex;
+//   align-items: center;
+//   margin-right: auto;
+// }
+
+// .nav-list {
+//   display: flex;
+//   list-style: none;
+// }
+
+// .nav-list__item + .nav-list__item {
+//   margin-left: 50px;
+// }
+
+// .nav-list__link {
+//   display: inline-block;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+//   font-weight: 500;
+//   letter-spacing: 0.02em;
+//   line-height: 1.169;
+//   color: $main-color-darkgrey;
+//   text-decoration: none;
+
+//   transition: color 250ms $transition-type;
+
+//   &:is(:hover, :focus) {
+//     color: $main-color-blue;
+//   }
+// }
+
+// .nav-list__link--active {
+//   position: relative;
+//   color: $main-color-blue;
+
+//   &::after {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     bottom: -1px;
+//     left: 0;
+//     height: 4px;
+//     width: 100%;
+//     border-radius: 2px;
+//     background-color: $main-color-blue;
+//   }
+// }
+// // #endregion
+// // #region CONTACTS
+// .contacts {
+//   display: flex;
+//   list-style: none;
+// }
+
+// .contacts__item + .contacts__item {
+//   margin-left: 50px;
+// }
+
+// .contacts__link {
+//   display: flex;
+//   align-items: center;
+//   font-weight: 500;
+//   letter-spacing: 0.02em;
+
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+//   text-decoration: none;
+//   color: $main-color-lightgrey;
+//   fill: currentColor;
+
+//   transition: color 250ms $transition-type;
+
+//   &:is(:hover, :focus) {
+//     color: $main-color-blue;
+//   }
+// }
+
+// .contacts__icon {
+//   margin-right: 10px;
+// }
+// #endregion
