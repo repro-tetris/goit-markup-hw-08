@@ -1,9 +1,8 @@
 .command {
   background-color: $bg-light;
-
-  @media screen and (min-width: 320px) and (max-width: $mobile) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
   }
   //   padding-top: 94px;
   //   padding-bottom: 94px;
@@ -14,35 +13,50 @@
   //font-size: 36px;
   font-weight: 700;
   line-height: 1.17;
-  color: $main-color-darkgrey;
+  color: $main-color-dark;
+  font-size: 28px;
+  margin-bottom: 30px;
   //margin-bottom: 50px;
-  @media screen and (min-width: 320px) and (max-width: $mobile) {
-    font-size: 28px;
-    margin-bottom: 30px;
+  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
   }
 }
 
 .command__list {
-  //   display: flex;
-
   list-style: none;
+
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -30px;
+  }
+}
+
+.command__item:nth-child(even) {
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    margin-left: 30px;
+  }
 }
 
 .command__item + .command__item {
   //  margin-left: 30px;
-  @media screen and (min-width: 320px) and (max-width: $mobile) {
+  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
     margin-top: 30px;
   }
 }
 
 .command__item {
   //padding-bottom: 30px;
-  background-color: $white-color;
-  box-shadow: 0px 1px 3px rgba($black-color, 0.12),
-    0px 1px 1px rgba($black-color, 0.14), 0px 2px 1px rgba($black-color, 0.2);
+  background-color: $light-color;
+  box-shadow: 0px 1px 3px rgba($dark-color, 0.12),
+    0px 1px 1px rgba($dark-color, 0.14), 0px 2px 1px rgba($dark-color, 0.2);
   border-radius: 0px 0px 4px 4px;
-  @media screen and (min-width: 320px) and (max-width: $mobile) {
-    padding-bottom: 24px;
+
+  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  }
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    flex-basis: calc(100% / 2 - 30px);
+    flex-grow: 1;
+    margin-top: 30px;
   }
 }
 
@@ -59,15 +73,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 30px 24px 0;
-  margin-bottom: 16px;
+  padding: 30px 30px 24px;
 }
 
 .command__subtitle {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.18;
-  color: $main-color-darkgrey;
+  color: $main-color-dark;
   padding-top: 1px;
   margin-bottom: 10px;
 }
@@ -75,7 +88,8 @@
 .command__prop {
   font-size: 16px;
   line-height: 1.19;
-  color: $main-color-lightgrey;
+  color: $main-color-light;
+  margin-bottom: 16px;
 }
 
 .command__icons {
@@ -104,7 +118,7 @@
     background-color 250ms $transition-type;
 
   &:is(:hover, :focus) {
-    background-color: $main-color-blue;
-    color: $white-color;
+    background-color: $main-accent-color;
+    color: $light-color;
   }
 }

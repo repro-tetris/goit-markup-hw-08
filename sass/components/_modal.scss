@@ -4,7 +4,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba($black-color, 0.2);
+  background-color: rgba($dark-color, 0.2);
   z-index: 100;
 
   transition: opacity 250ms $transition-type;
@@ -24,9 +24,9 @@
   width: 528px;
 
   padding: 40px;
-  background-color: $white-color;
-  box-shadow: 0px 1px 3px rgba($black-color, 0.12),
-    0px 1px 1px rgba($black-color, 0.14), 0px 2px 1px rgba($black-color, 0.2);
+  background-color: $light-color;
+  box-shadow: 0px 1px 3px rgba($dark-color, 0.12),
+    0px 1px 1px rgba($dark-color, 0.14), 0px 2px 1px rgba($dark-color, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1, 1);
   transition: transform 250ms $transition-type 250ms;
@@ -43,15 +43,15 @@
   height: 30px;
   border-radius: 50%;
   color: $bg-dark;
-  background-color: $white-color;
-  border: 1px solid rgba($black-color, 0.1);
+  background-color: $light-color;
+  border: 1px solid rgba($dark-color, 0.1);
   cursor: pointer;
   fill: currentColor;
 
   transition: color 250ms $transition-type, color 250ms $transition-type;
 
   &:is(:hover, :focus) {
-    color: $main-color-blue;
+    color: $main-accent-color;
   }
 }
 
@@ -73,7 +73,7 @@
   font-size: 12px;
   line-height: 1.167;
   margin-bottom: 4px;
-  color: $main-color-lightgrey;
+  color: $main-color-light;
 }
 
 .input-wrapper {
@@ -87,12 +87,12 @@
   padding-left: 42px;
   border-width: 1px;
   border-radius: 4px;
-  border-color: rgba($main-color-darkgrey, 0.2);
+  border-color: rgba($main-color-dark, 0.2);
   transition: border-color 250ms $transition-type;
 
   &:is(:hover, :focus) {
-    border: 1px solid $main-color-blue;
-    outline: $main-color-blue;
+    border: 1px solid $main-accent-color;
+    outline: $main-accent-color;
   }
 }
 
@@ -102,18 +102,18 @@
   top: 50%;
   transform: translateY(-50%);
 
-  color: $main-color-darkgrey;
+  color: $main-color-dark;
   fill: currentColor;
 
   transition: color 250ms $transition-type;
 
   .modal__input:is(:hover, :focus) + & {
-    color: $main-color-blue;
+    color: $main-accent-color;
   }
 }
 
 .modal__comment {
-  border: 1px solid rgba($main-color-darkgrey, 0.2);
+  border: 1px solid rgba($main-color-dark, 0.2);
   border-radius: 4px;
   resize: none;
   height: 120px;
@@ -122,11 +122,11 @@
   transition: border 250ms $transition-type;
 
   &:is(:hover, :focus) {
-    border: 1px solid $main-color-blue;
-    outline: $main-color-blue;
+    border: 1px solid $main-accent-color;
+    outline: $main-accent-color;
   }
   &::placeholder {
-    color: rgba($main-color-lightgrey, 0.5);
+    color: rgba($main-color-light, 0.5);
   }
 }
 
@@ -153,12 +153,12 @@
   height: 15px;
   box-sizing: content-box;
   fill: currentColor;
-  color: $main-color-darkgrey;
+  color: $main-color-dark;
 
   transition: color 250ms $transition-type;
 
   .terms__check:is(:hover, :focus) + & {
-    color: $main-color-blue;
+    color: $main-accent-color;
     cursor: pointer;
   }
 }
@@ -186,7 +186,7 @@
 }
 
 .terms__txt {
-  color: $main-color-lightgrey;
+  color: $main-color-light;
   line-height: 1.53;
 
   user-select: none;
@@ -194,7 +194,7 @@
 
 .terms__link {
   text-decoration: none;
-  color: $main-color-blue;
+  color: $main-accent-color;
 }
 
 .terms__link--underline {
@@ -206,15 +206,15 @@
 .terms__submit-btn {
   border: none;
   padding: 10px 55px;
-  background-color: $main-color-blue;
-  color: $white-color;
+  background-color: $main-accent-color;
+  color: $light-color;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.06em;
   border-radius: 4px;
   align-self: center;
   line-height: 1.875;
-  box-shadow: 0px 4px 4px rgba($black-color, 0.15);
+  box-shadow: 0px 4px 4px rgba($dark-color, 0.15);
   transition: background-color 250ms $transition-type;
 
   &:is(:hover, :focus) {

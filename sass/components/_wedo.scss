@@ -1,18 +1,19 @@
 .wedo {
-  @media screen and (min-width: 320px) and (max-width: $mobile) {
-    display: none;
+  display: none;
+
+  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  }
+
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
   }
 }
 
-// .wedo {
-//   padding-bottom: 94px;
-// }
 // .wedo__title {
 //   text-align: center;
 //   font-size: 36px;
 //   font-weight: 700;
 //   line-height: 1.17;
-//   color: $main-color-darkgrey;
+//   color: $main-color-dark;
 //   margin-bottom: 50px;
 // }
 
@@ -45,6 +46,6 @@
 //   left: 0;
 //   text-align: center;
 //   text-transform: uppercase;
-//   color: $white-color;
+//   color: $light-color;
 //   background-color: rgba($bg-dark, 0.8);
 // }
