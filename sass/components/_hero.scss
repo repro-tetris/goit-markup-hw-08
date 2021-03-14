@@ -15,6 +15,14 @@
     background: linear-gradient(rgba($bg-dark, 0.4), rgba($bg-dark, 0.4)),
       url("../images/tablet-hero.jpg") no-repeat center / cover;
   }
+  @media screen and (min-width: $desktop-min) {
+    height: 600px;
+    max-width: $desktop-max;
+    min-width: $desktop-min;
+    margin: 0 auto;
+    background: linear-gradient(rgba($bg-dark, 0.4), rgba($bg-dark, 0.4)),
+      url("../images/hero.jpg") no-repeat center / cover;
+  }
 }
 
 .hero--container {
@@ -28,8 +36,7 @@
 
 .hero__title {
   font-weight: 900;
-  // font-size: 44px;
-  // line-height: 1.37;
+
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: $light-color;
@@ -41,6 +48,11 @@
   @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     font-size: 26px;
     line-height: 1.615;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    font-size: 44px;
+    line-height: 1.37;
   }
 }
 

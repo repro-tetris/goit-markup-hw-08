@@ -6,8 +6,6 @@
 
 .footer--container {
   display: flex;
-  //align-items: baseline;
-  //justify-content: space-between;
 
   @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
     flex-direction: column;
@@ -19,12 +17,18 @@
     justify-content: space-around;
     align-items: baseline;
   }
+
+  @media screen and (min-width: $desktop-min) {
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
 .footer__address {
   text-align: center;
   margin-bottom: 60px;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  @media screen and (min-width: $desktop-min) {
+    text-align: left;
   }
 }
 
@@ -68,7 +72,8 @@
   margin-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  @media screen and (min-width: $desktop-min) {
+    text-align: left;
   }
 }
 
@@ -101,10 +106,9 @@
 
 .footer-subscribe {
   width: 100%;
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
-    // flex-grow: 2;
+  @media screen and (min-width: $desktop-min) {
+    width: inherit;
   }
-  // margin-left: 93px;
 }
 
 .subscribe-form {
@@ -113,29 +117,36 @@
   align-items: center;
   @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
   }
+  @media screen and (min-width: $desktop-min) {
+    flex-direction: row;
+  }
 }
 
 .subscribe-form__email {
-  //width: 358px;
   height: 50px;
   border: 1px solid rgba($light-color, 0.3);
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba($dark-color, 0.15);
   padding: 15px 16px;
   background-color: rgba($main-accent-color, 0);
-  //margin-right: 12px;
   color: $light-color;
   font-size: 16px;
-  margin-bottom: 20px;
+
   &::placeholder {
     line-height: 1.25;
     color: rgba($light-color, 0.6);
   }
   @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
     width: 100%;
+    margin-bottom: 20px;
   }
   @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     width: 450px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop-min) {
+    width: 358px;
+    margin-right: 12px;
   }
 }
 

@@ -46,6 +46,11 @@
     flex-grow: 2;
     justify-content: space-between;
   }
+  @media screen and (min-width: $desktop-min) {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 2;
+  }
 }
 
 .header--container {
@@ -53,6 +58,9 @@
   // align-items: center;
   @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     // justify-content: space-between;
+  }
+  @media screen and (min-width: $desktop-min) {
+    align-items: center;
   }
 }
 // #endregion
@@ -65,14 +73,12 @@
 }
 
 .nav-list {
-  width: 100%;
   display: flex;
   list-style: none;
+  justify-content: space-between;
 }
-
 .nav-list__item + .nav-list__item {
   margin-left: 50px;
-  // margin-left: calc(((100% + 100px) / 294px) * 50px);
 }
 
 .nav-list__link {
@@ -112,9 +118,12 @@
 
 // #region CONTACTS
 .contacts {
-  // display: flex;
   list-style: none;
   @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  }
+  @media screen and (min-width: $desktop-min) {
+    display: flex;
+    margin-left: auto;
   }
 }
 
@@ -122,11 +131,10 @@
   @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
     margin-top: 10px;
   }
+  @media screen and (min-width: $desktop-min) {
+    margin-left: 30px;
+  }
 }
-
-// .contacts__item + .contacts__item {
-//   margin-left: 50px;
-// }
 
 .contacts__link {
   display: flex;
@@ -134,8 +142,6 @@
   font-weight: 500;
   letter-spacing: 0.02em;
 
-  // padding-top: 32px;
-  // padding-bottom: 32px;
   text-decoration: none;
   color: $main-color-light;
   fill: currentColor;
@@ -146,6 +152,10 @@
     color: $main-accent-color;
   }
   @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  }
+  @media screen and (min-width: $desktop-min) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 }
 

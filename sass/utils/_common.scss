@@ -23,8 +23,8 @@ body {
     min-width: $tablet-min;
   }
 
-  @media screen and (min-width: $desktop-min) and (max-width: $desktop-max) {
-    max-width: $desktop-max;
-    min-width: $desktop-min;
+  @media screen and (min-width: $desktop-min) {
+    max-width: $desktop-container-w;
+    min-width: $desktop-container-w;
   }
 }

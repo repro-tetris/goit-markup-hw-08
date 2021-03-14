@@ -4,8 +4,10 @@
   padding-bottom: 60px;
   @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
   }
-  //   padding-top: 94px;
-  //   padding-bottom: 94px;
+  @media screen and (min-width: $desktop-min) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .command__title {
@@ -29,6 +31,9 @@
     flex-wrap: wrap;
     margin-top: -30px;
   }
+  @media screen and (min-width: $desktop-min) {
+    display: flex;
+  }
 }
 
 .command__item:nth-child(even) {
@@ -38,9 +43,11 @@
 }
 
 .command__item + .command__item {
-  //  margin-left: 30px;
   @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
     margin-top: 30px;
+  }
+  @media screen and (min-width: $desktop-min) {
+    margin-left: 30px;
   }
 }
 
@@ -58,13 +65,16 @@
     flex-grow: 1;
     margin-top: 30px;
   }
+  @media screen and (min-width: $desktop-min) {
+    flex-basis: calc(100% / 4 - 30px);
+    flex-grow: 1;
+  }
 }
 
 .command__img {
   display: block;
   width: 100%;
   height: auto;
-
   max-width: 100%;
 }
 
@@ -74,6 +84,9 @@
   align-items: center;
   justify-content: center;
   padding: 30px 30px 24px;
+  @media screen and (min-width: $desktop-min) {
+    padding: 30px 32px;
+  }
 }
 
 .command__subtitle {
@@ -81,7 +94,7 @@
   font-weight: 500;
   line-height: 1.18;
   color: $main-color-dark;
-  padding-top: 1px;
+
   margin-bottom: 10px;
 }
 
