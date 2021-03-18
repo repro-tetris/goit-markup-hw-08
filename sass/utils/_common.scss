@@ -8,23 +8,18 @@ body {
   font-size: 14px;
 }
 .container {
-  $gaps: 15px;
-  padding-left: $gaps;
-  padding-right: $gaps;
+  min-width: 320px;
+  max-width: $mobile-max;
+
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
-    max-width: $mobile-max;
-    min-width: $mobile-min;
-  }
-
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
-    max-width: $tablet-max;
-    min-width: $tablet-min;
+  @media screen and (min-width: $tablet-min) {
+    max-width: $tablet-min;
   }
 
   @media screen and (min-width: $desktop-min) {
     max-width: $desktop-container-w;
-    min-width: $desktop-container-w;
   }
 }

@@ -6,7 +6,7 @@
   height: 100%;
   background-color: rgba($dark-color, 0.2);
   z-index: 100;
-
+  overflow-y: auto;
   transition: opacity 250ms $transition-type;
 }
 
@@ -21,7 +21,7 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 528px;
+  width: calc(100% - 30px);
 
   padding: 40px;
   background-color: $light-color;
@@ -30,6 +30,14 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1, 1);
   transition: transform 250ms $transition-type 250ms;
+
+  @media screen and (min-width: $mobile-max) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    width: 528px;
+  }
 }
 
 .modal__close-btn {
@@ -60,8 +68,11 @@
   font-size: 20px;
   letter-spacing: 0.03em;
   text-align: center;
-  line-height: 1.15;
+  line-height: 1.5;
   margin-bottom: 12px;
+  @media screen and (min-width: $desktop-min) {
+    line-height: 1.15;
+  }
 }
 
 .modal__form {
@@ -133,7 +144,7 @@
 .terms {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 30px;
 }
 
@@ -147,8 +158,7 @@
 }
 
 .icon-wrapper {
-  margin-right: 7px;
-  position: relative;
+  position: absolute;
   width: 16px;
   height: 15px;
   box-sizing: content-box;
@@ -186,9 +196,12 @@
 }
 
 .terms__txt {
+  padding-left: 17px + 7px;
   color: $main-color-light;
   line-height: 1.53;
-
+  @media screen and (max-width: $desktop-min) {
+    font-size: 12px;
+  }
   user-select: none;
 }
 

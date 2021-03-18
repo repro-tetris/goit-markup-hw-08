@@ -1,11 +1,7 @@
 .advantages {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
-  }
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
-  }
-
+ 
   @media screen and (min-width: $desktop-min) {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -14,7 +10,7 @@
 
 .advantages__list {
   list-style: none;
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
     display: flex;
     flex-wrap: wrap;
     margin-top: -30px;
@@ -25,7 +21,7 @@
 }
 
 .advantages__item {
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
     flex-basis: calc(100% / 2 - 30px);
     flex-grow: 1;
     margin-top: 30px;
@@ -38,13 +34,13 @@
 }
 
 .advantages__item:nth-child(even) {
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
     margin-left: 30px;
   }
 }
 
 .advantages__item + .advantages__item {
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  @media screen and (max-width: $tablet-min) {
     margin-top: 30px;
   }
 }
@@ -67,7 +63,7 @@
   //   line-height: 1.2;
   margin-bottom: 10px;
   font-weight: 700;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  @media screen and (max-width: $tablet-min) {
     line-height: 1.17;
     text-align: center;
   }

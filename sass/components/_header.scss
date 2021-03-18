@@ -5,19 +5,28 @@
   border-bottom: 1px solid $border-color-light;
   margin: 0 auto;
 }
+.burger-menu__icon-open {
+  .is-open & {
+    display: none;
+  }
+}
+.menu-btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background-color: transparent;
+  color: $dark-color;
+  fill: currentColor;
+  transform: translateY(-50%);
+  transition: color 250ms $transition-type;
 
-.burger-menu {
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    display: block;
-    width: 40px;
-    height: 40px;
-    border: 0;
-    background-color: transparent;
-
-    transform: translateY(-50%);
+  &:is(:hover, :focus) {
+    color: $main-accent-color;
+    cursor: pointer;
   }
 
   @media screen and (min-width: $tablet-min) {
@@ -25,22 +34,9 @@
   }
 }
 
-.burger-menu__icon-open {
-}
-
-.burger-menu__icon-close {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .menu {
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  display: none;
+  @media screen and (min-width: $tablet-min) {
     display: flex;
     align-items: center;
     flex-grow: 2;
@@ -55,10 +51,6 @@
 
 .header--container {
   display: flex;
-  // align-items: center;
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
-    // justify-content: space-between;
-  }
   @media screen and (min-width: $desktop-min) {
     align-items: center;
   }
@@ -77,14 +69,16 @@
   list-style: none;
   justify-content: space-between;
 }
+
 .nav-list__item + .nav-list__item {
-  margin-left: 50px;
+  @media screen and (min-width: $tablet-min) {
+    margin-left: 50px;
+  }
 }
 
 .nav-list__link {
   display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.169;
@@ -96,22 +90,27 @@
   &:is(:hover, :focus) {
     color: $main-accent-color;
   }
+  @media screen and (min-width: $tablet-min) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .nav-list__link--active {
   position: relative;
   color: $main-accent-color;
-
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    height: 4px;
-    width: 100%;
-    border-radius: 2px;
-    background-color: $main-accent-color;
+  @media screen and (min-width: $tablet-min) {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      border-radius: 2px;
+      background-color: $main-accent-color;
+    }
   }
 }
 // #endregion
@@ -119,8 +118,12 @@
 // #region CONTACTS
 .contacts {
   list-style: none;
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+
+  @media screen and (max-width: $tablet-min) {
+    display: flex;
+    flex-direction: column-reverse;
   }
+
   @media screen and (min-width: $desktop-min) {
     display: flex;
     margin-left: auto;
@@ -128,7 +131,10 @@
 }
 
 .contacts__item + .contacts__item {
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  @media screen and (max-width: $tablet-min) {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
     margin-top: 10px;
   }
   @media screen and (min-width: $desktop-min) {
@@ -151,15 +157,29 @@
   &:is(:hover, :focus) {
     color: $main-accent-color;
   }
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
-  }
+
   @media screen and (min-width: $desktop-min) {
     padding-top: 32px;
     padding-bottom: 32px;
   }
 }
 
+.contacts__link--tel {
+  @media screen and (max-width: $tablet-min) {
+    font-size: 34px;
+  }
+}
+.contacts__link--mail {
+  @media screen and (max-width: $tablet-min) {
+    font-size: 24px;
+  }
+}
 .contacts__icon {
   margin-right: 10px;
+
+  @media screen and (max-width: $tablet-min) {
+    display: none;
+  }
 }
+
 //#endregion

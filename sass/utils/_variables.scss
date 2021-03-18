@@ -11,14 +11,7 @@ $customer-color: #afb1b8;
 $transition-type: cubic-bezier(0.4, 0, 0.2, 1);
 
 $desktop-container-w: 1170px + 30px;
-$mobile-min: 320px;
-// $mobile-min: 320px;
-$mobile-max: 768px;
-// $mobile-max: 481px;
+$mobile-max: 480px;
 $tablet-min: 768px;
-// $tablet-min: 481px;
-$tablet-max: $desktop-container-w;
-// $tablet-max: 769px;
 $desktop-min: $desktop-container-w;
-// $desktop-min: 769px;
 $desktop-max: 1600px;

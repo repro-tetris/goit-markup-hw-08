@@ -8,11 +8,11 @@
   line-height: 1.2;
   color: $dark-color;
   text-decoration: none;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  @media screen and (max-width: $tablet-min) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
     padding-top: 26px;
     padding-bottom: 26px;
     flex-grow: 2;

@@ -1,23 +1,54 @@
 .portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop-min) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .filter__list {
   list-style: none;
-  text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  @media screen and (max-width: $tablet-min) {
+    flex-wrap: wrap;
+    margin-top: -15px;
+  }
+
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
+    justify-content: center;
+    //margin-top: -15px;
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {
-  display: inline-flex;
+  //display: inline-flex;
+  @media screen and (min-width: $desktop-min) {
+    display: inline-flex;
+  }
 
   &:is(:hover, :focus) {
     box-shadow: 0px 4px 4px rgba($dark-color, 0.25);
   }
+  // outline: 1px solid springgreen;
+}
+.filter__item {
+  @media screen and (max-width: $tablet-min) {
+    margin-top: 15px;
+    margin-right: 8px;
+  }
 }
 .filter__item + .filter__item {
-  margin-left: 8px;
+  @media screen and (min-width: $tablet-min) {
+    margin-left: 8px;
+  }
 }
 
 .filter__btn {
@@ -46,23 +77,33 @@
 
 .portfolio__list {
   display: flex;
+
   flex-wrap: wrap;
   list-style: none;
 
-  /* 
-  в майбутньому тут можна використовувати
-  row-gap: 30px;
-  column-gap: 30px;
-  замість "костилів" з від'ємними маржинами
-  */
   margin-left: -30px;
   margin-top: -30px;
+
+  @media screen and (max-width: $tablet-min) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
+    //flex-grow: 1;
+  }
 }
 
 .portfolio__item {
+  display: flex;
+  flex-direction: column;
+
   margin-left: 30px;
   margin-top: 30px;
-
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+  @media screen and (min-width: $desktop-min) {
+    flex-basis: calc(100% / 3 - 30px);
+  }
   transition: box-shadow 250ms $transition-type;
 
   &:is(:hover, :focus) {
@@ -73,11 +114,17 @@
 .portfolio__thumb {
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: $desktop-min) {
+    // height: 294px;
+  }
 }
 
 .portfolio__img {
   display: block;
+  width: 100%;
   max-width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .portfolio__overlay {
@@ -106,7 +153,8 @@
 }
 
 .portfolio__description {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   padding: 20px 24px;
   background-color: $light-color;
@@ -114,6 +162,7 @@
   border-right: 1px solid $border-color-light;
   border-bottom: 1px solid $border-color-light;
   outline: none;
+  flex-grow: 1;
 }
 
 .portfolio__subtitle {

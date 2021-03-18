@@ -1,10 +1,11 @@
 .customers {
   padding-top: 60px;
   padding-bottom: 60px;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+
+  @media screen and (min-width: $desktop-min) {
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
-  //   padding-top: 94px;
-  //   padding-bottom: 94px;
 }
 
 .customers__header {
@@ -13,11 +14,8 @@
   font-weight: 700;
   line-height: 1.17;
   color: $main-color-dark;
-  //margin-bottom: 50px;
   font-size: 28px;
   margin-bottom: 30px;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
-  }
 }
 
 .clients__list {
@@ -26,21 +24,24 @@
   list-style: none;
   margin-top: -30px;
   margin-left: -30px;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
-  }
 }
 
 .clients__item {
-  //flex-basis: calc(100% / 6 );
   height: 90px;
   flex-grow: 1;
   margin-top: 30px;
   margin-left: 30px;
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+
+  @media screen and (max-width: $tablet-min) {
     flex-basis: calc(100% / 2 - 30px);
   }
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
     flex-basis: calc(100% / 3 - 30px);
+  }
+
+  @media screen and (min-width: $desktop-min) {
+    flex-basis: calc(100% / 6 - 30px);
   }
 }
 

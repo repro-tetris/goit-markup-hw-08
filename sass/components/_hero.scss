@@ -1,15 +1,20 @@
 .hero {
   height: 400px;
   background-color: $bg-dark;
-  max-width: $mobile-max;
-  min-width: $mobile-min;
+  max-width: $tablet-min;
 
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  @media screen and (max-width: $tablet-min) {
     background: linear-gradient(rgba($bg-dark, 0.4), rgba($bg-dark, 0.4)),
       url("../images/mobile-hero.jpg") no-repeat center / cover;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background: linear-gradient(rgba($bg-dark, 0.4), rgba($bg-dark, 0.4)),
+        url("../images/mobile-hero@2x.jpg") no-repeat center / cover;
+    }
   }
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
-    max-width: $tablet-max;
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
+    max-width: $desktop-min;
     min-width: $tablet-min;
 
     background: linear-gradient(rgba($bg-dark, 0.4), rgba($bg-dark, 0.4)),
@@ -42,10 +47,10 @@
   color: $light-color;
   line-height: 1.615;
 
-  @media screen and (min-width: $mobile-min) and (max-width: $mobile-max) {
+  @media screen and (max-width: $tablet-min) {
     font-size: 26px;
   }
-  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
     font-size: 26px;
     line-height: 1.615;
   }
