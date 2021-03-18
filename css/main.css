@@ -357,28 +357,30 @@ body {
   height: 400px;
   background-color: #2f303a;
   max-width: 768px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile-hero.jpg") no-repeat center/cover;
+  background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile-hero.jpg") no-repeat center/cover;
 }
 
-@media screen and (max-width: 768px) {
-  .hero {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile-hero.jpg") no-repeat center/cover;
-    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile-hero.jpg") no-repeat center/cover;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-device-pixel-ratio: 2), screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 768px) and (min-resolution: 192dpi), screen and (max-width: 768px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/mobile-hero@2x.jpg") no-repeat center/cover;
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile-hero@2x.jpg") no-repeat center/cover;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .hero {
     max-width: 1200px;
     min-width: 768px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet-hero.jpg") no-repeat center/cover;
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet-hero.jpg") no-repeat center/cover;
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/tablet-hero@2x.jpg") no-repeat center/cover;
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet-hero@2x.jpg") no-repeat center/cover;
   }
 }
 
@@ -390,6 +392,13 @@ body {
     margin: 0 auto;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero.jpg") no-repeat center/cover;
     background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg") no-repeat center/cover;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero@2x.jpg") no-repeat center/cover;
+    background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero@2x.jpg") no-repeat center/cover;
   }
 }
 
@@ -475,55 +484,39 @@ body {
 
 .advantages__list {
   list-style: none;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .advantages__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: -30px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .advantages__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+.advantages__item {
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .advantages__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    margin-top: 30px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .advantages__item {
-    -ms-flex-preferred-size: calc((100% - 30px) / 4);
-        flex-basis: calc((100% - 30px) / 4);
-    margin-left: 30px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .advantages__item:nth-child(even) {
-    margin-left: 30px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .advantages__item + .advantages__item {
-    margin-top: 30px;
+    -ms-flex-preferred-size: calc(100% / 4 - 30px);
+        flex-basis: calc(100% / 4 - 30px);
   }
 }
 
@@ -646,11 +639,18 @@ body {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .command__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+}
+
 .command__list {
   list-style: none;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .command__list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -658,31 +658,16 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-top: -30px;
+    margin-left: -30px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .command__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+.command__item {
+  margin-top: 30px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .command__item:nth-child(even) {
-    margin-left: 30px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .command__item + .command__item {
-    margin-top: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .command__item + .command__item {
+@media screen and (min-width: 768px) {
+  .command__item {
     margin-left: 30px;
   }
 }
@@ -694,7 +679,7 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .command__item {
     -ms-flex-preferred-size: calc(100% / 2 - 30px);
         flex-basis: calc(100% / 2 - 30px);
@@ -709,17 +694,32 @@ body {
   .command__item {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+  }
+}
+
+.command__thumb {
+  height: 460px;
+}
+
+@media screen and (min-width: 768px) {
+  .command__thumb {
+    height: 374px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .command__thumb {
+    height: 260px;
   }
 }
 
 .command__img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .command__meta {
@@ -819,6 +819,13 @@ body {
   color: #212121;
   font-size: 28px;
   margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .customers__header {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
@@ -1065,6 +1072,7 @@ body {
   background-color: rgba(33, 150, 243, 0);
   color: #fff;
   font-size: 16px;
+  width: 100%;
 }
 
 .subscribe-form__email::-webkit-input-placeholder {
@@ -1087,14 +1095,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-@media screen and (max-width: 768px) {
-  .subscribe-form__email {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .subscribe-form__email {
     width: 450px;
     margin-bottom: 20px;
@@ -1290,6 +1291,7 @@ body {
 .portfolio__thumb {
   position: relative;
   overflow: hidden;
+  height: 294px;
 }
 
 .portfolio__img {
@@ -1298,8 +1300,6 @@ body {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
 .portfolio__overlay {

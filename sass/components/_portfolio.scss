@@ -90,9 +90,6 @@
   @media screen and (max-width: $tablet-min) {
     flex-direction: column;
   }
-  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
-    //flex-grow: 1;
-  }
 }
 
 .portfolio__item {
@@ -117,9 +114,7 @@
 .portfolio__thumb {
   position: relative;
   overflow: hidden;
-  @media screen and (max-width: $desktop-min) {
-    // height: 294px;
-  }
+  height: 294px;
 }
 
 .portfolio__img {
@@ -127,7 +122,6 @@
   width: 100%;
   max-width: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
 .portfolio__overlay {

@@ -11,68 +11,67 @@
 
 .command__title {
   text-align: center;
-  //font-size: 36px;
   font-weight: 700;
   line-height: 1.17;
   color: $main-color-dark;
   font-size: 28px;
   margin-bottom: 30px;
-  //margin-bottom: 50px;
 
+  @media screen and (min-width: $desktop-min) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .command__list {
   list-style: none;
 
-  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
+  @media screen and (min-width: $tablet-min) {
     display: flex;
     flex-wrap: wrap;
     margin-top: -30px;
-  }
-  @media screen and (min-width: $desktop-min) {
-    display: flex;
+    margin-left: -30px;
   }
 }
 
-.command__item:nth-child(even) {
-  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
-    margin-left: 30px;
-  }
-}
-
-.command__item + .command__item {
-  @media screen  and (max-width: $tablet-min) {
-    margin-top: 30px;
-  }
-  @media screen and (min-width: $desktop-min) {
+.command__item {
+  margin-top: 30px;
+  @media screen and (min-width: $tablet-min) {
     margin-left: 30px;
   }
 }
 
 .command__item {
-  //padding-bottom: 30px;
   background-color: $light-color;
   box-shadow: 0px 1px 3px rgba($dark-color, 0.12),
     0px 1px 1px rgba($dark-color, 0.14), 0px 2px 1px rgba($dark-color, 0.2);
   border-radius: 0px 0px 4px 4px;
 
- 
-  @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
+  @media screen and (min-width: $tablet-min) {
     flex-basis: calc(100% / 2 - 30px);
     flex-grow: 1;
     margin-top: 30px;
   }
   @media screen and (min-width: $desktop-min) {
     flex-basis: calc(100% / 4 - 30px);
-    flex-grow: 1;
+  }
+}
+.command__thumb {
+  height: 460px;
+  @media screen and (min-width: $tablet-min) {
+    height: 374px;
+  }
+  @media screen and (min-width: $desktop-min) {
+    height: 260px;
   }
 }
 
 .command__img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 100%;
+  object-fit: cover;
 }
 
 .command__meta {

@@ -10,12 +10,17 @@
 
 .customers__header {
   text-align: center;
-  // font-size: 36px;
+
   font-weight: 700;
   line-height: 1.17;
   color: $main-color-dark;
   font-size: 28px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop-min) {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .clients__list {
