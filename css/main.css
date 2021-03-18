@@ -112,6 +112,21 @@ body {
   margin: 0 auto;
 }
 
+.header--container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .header--container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .is-open .burger-menu__icon-open {
   display: none;
 }
@@ -176,20 +191,6 @@ body {
     -webkit-box-flex: 2;
         -ms-flex-positive: 2;
             flex-grow: 2;
-  }
-}
-
-.header--container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (min-width: 1200px) {
-  .header--container {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -1223,7 +1224,7 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter__btn:is(:hover, :focus, .filter__btn--active) {
+.filter__btn:hover, .filter__btn:focus, .filter__btn.filter__btn--active {
   color: #fff;
   background-color: #2196f3;
   cursor: pointer;

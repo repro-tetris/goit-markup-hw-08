@@ -66,7 +66,10 @@
   transition: color 250ms $transition-type,
     background-color 250ms $transition-type, box-shadow 250ms $transition-type;
 
-  &:is(:hover, :focus, .filter__btn--active) {
+  &:hover,
+  &:focus,
+  &.filter__btn--active {
+    //&:is(:hover, :focus, .filter__btn--active) {
     color: $light-color;
     background-color: $main-accent-color;
     cursor: pointer;

@@ -5,6 +5,15 @@
   border-bottom: 1px solid $border-color-light;
   margin: 0 auto;
 }
+
+.header--container {
+  position: relative;
+  display: flex;
+  @media screen and (min-width: $desktop-min) {
+    align-items: center;
+  }
+}
+
 .burger-menu__icon-open {
   .is-open & {
     display: none;
@@ -49,12 +58,6 @@
   }
 }
 
-.header--container {
-  display: flex;
-  @media screen and (min-width: $desktop-min) {
-    align-items: center;
-  }
-}
 // #endregion
 
 // #region NAVIGATION
