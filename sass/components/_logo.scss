@@ -1,21 +1,22 @@
 .logo {
   display: block;
 
-  font-family: "Raleway", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  // font-size: 26px;
   line-height: 1.2;
   color: $dark-color;
   text-decoration: none;
-  @media screen and (max-width: $tablet-min) {
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+  padding-top: 16px;
+  padding-bottom: 16px;
+
   @media screen and (min-width: $tablet-min) and (max-width: $desktop-min) {
+    flex-grow: 2;
+  }
+
+  @media screen and (min-width: $tablet-min) {
     padding-top: 26px;
     padding-bottom: 26px;
-    flex-grow: 2;
   }
   @media screen and (min-width: $desktop-min) {
     padding-top: 24px;
