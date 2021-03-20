@@ -1097,8 +1097,13 @@ body {
 
 @media screen and (max-width: 1200px) {
   .subscribe-form__email {
-    width: 450px;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-form__email {
+    width: 450px;
   }
 }
 
@@ -1191,7 +1196,7 @@ body {
   }
 }
 
-.filter__item:is(:hover, :focus) {
+.filter__item:hover, .filter__item:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1283,7 +1288,7 @@ body {
   }
 }
 
-.portfolio__item:is(:hover, :focus) {
+.portfolio__item:hover, .portfolio__item:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -1328,7 +1333,8 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio__item:is(:hover, :focus) .portfolio__overlay {
+.portfolio__item:hover .portfolio__overlay,
+.portfolio__item:hover:focus .portfolio__overlay {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -1657,7 +1663,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.terms__submit-btn:is(:hover, :focus) {
+.terms__submit-btn:hover, .terms__submit-btn:focus {
   cursor: pointer;
   background-color: #188ce8;
 }

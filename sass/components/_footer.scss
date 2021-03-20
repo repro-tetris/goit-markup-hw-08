@@ -48,7 +48,8 @@
 
   transition: color 250ms $transition-type;
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     color: $main-accent-color;
     opacity: 1;
   }
@@ -99,7 +100,8 @@
 
   transition: background-color 250ms $transition-type;
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     background-color: $main-accent-color;
   }
 }
@@ -136,9 +138,13 @@
     line-height: 1.25;
     color: rgba($light-color, 0.6);
   }
+
   @media screen and (max-width: $desktop-min) {
-    width: 450px;
     margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: $tablet-min) {
+    width: 450px;
   }
   @media screen and (min-width: $desktop-min) {
     width: 358px;

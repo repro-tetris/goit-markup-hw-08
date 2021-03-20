@@ -61,7 +61,8 @@
 
   transition: color 250ms $transition-type;
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     color: $main-accent-color;
   }
 }

@@ -90,7 +90,8 @@
   border-radius: 4px;
   box-shadow: 0 4px 4px 0 rgba($dark-color, 15%);
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     cursor: pointer;
   }
 }

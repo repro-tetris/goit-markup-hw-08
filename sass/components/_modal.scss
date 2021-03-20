@@ -230,7 +230,8 @@
   box-shadow: 0px 4px 4px rgba($dark-color, 0.15);
   transition: background-color 250ms $transition-type;
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     cursor: pointer;
     background-color: #188ce8;
   }

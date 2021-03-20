@@ -34,7 +34,8 @@
     display: inline-flex;
   }
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     box-shadow: 0px 4px 4px rgba($dark-color, 0.25);
   }
   // outline: 1px solid springgreen;
@@ -69,7 +70,6 @@
   &:hover,
   &:focus,
   &.filter__btn--active {
-    //&:is(:hover, :focus, .filter__btn--active) {
     color: $light-color;
     background-color: $main-accent-color;
     cursor: pointer;
@@ -106,7 +106,8 @@
   }
   transition: box-shadow 250ms $transition-type;
 
-  &:is(:hover, :focus) {
+  &:hover,
+  &:focus {
     box-shadow: 0px 4px 4px rgba($dark-color, 0.25);
   }
 }
@@ -143,7 +144,8 @@
 
   transition: transform 250ms $transition-type;
 
-  .portfolio__item:is(:hover, :focus) & {
+  .portfolio__item:hover &,
+  .portfolio__item:hover:focus & {
     opacity: 1;
     transform: translateY(0);
   }
